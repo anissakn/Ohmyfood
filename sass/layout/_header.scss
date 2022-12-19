@@ -1,0 +1,22 @@
+header {
+    height: 60px;    
+}
+
+header img {
+    display: block;
+    padding-top: 15px;
+    margin:auto;
+    height: 30px;
+}
+
+.header_menus {
+    position:relative;
+    i {
+        position: absolute;
+        left: 5%;
+        top: 40%;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: $footer-bgcolor;
+    }
+}

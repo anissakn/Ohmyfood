@@ -1,0 +1,26 @@
+@mixin flexbox-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin flexbox-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin roboto-lightwght {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+@mixin h1-indentation {
+    margin-left: 5%;
+}
+
+@mixin restaurants-cards-font-style($first-font-size: $font-size) {
+    font-size: $first-font-size;
+    margin: 7px 0 0 10px;
+}
+
