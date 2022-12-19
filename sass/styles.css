@@ -23,10 +23,10 @@ header img {
   height: 30px;
 }
 
-.header_menus {
+.header__pages-menus {
   position: relative;
 }
-.header_menus i {
+.header__pages-menus i {
   position: absolute;
   left: 5%;
   top: 40%;
