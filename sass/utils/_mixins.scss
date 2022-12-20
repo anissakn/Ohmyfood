@@ -15,6 +15,11 @@
     font-weight: 300;
 }
 
+@mixin shrikhand-titles-font-style {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.6em;
+}
+
 @mixin h1-indentation {
     margin-left: 5%;
 }
