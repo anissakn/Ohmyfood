@@ -2,4 +2,15 @@
     border-radius: 7px;
     box-shadow: 5px 5px 15px -5px lightgrey;
     margin: auto;
+    &-menus__style {
+        @include flexbox-column;
+        width: 90%;
+        height: 60px;
+        margin-bottom: 15px;
+        padding: 0 3%;
+        box-sizing: border-box;
+        p {
+            margin: 0;
+        }
+    }
 }
