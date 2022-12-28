@@ -42,18 +42,24 @@ body {
 .btn-menus__style p {
   margin: 0;
 }
+.btn-menus__style:hover .prix {
+  transform: translateX(-55px);
+}
 .btn-menus__style:hover .btn__check {
-  transform: scaleX(1);
+  transform: translateX(-58px);
 }
 .btn-menus__style:hover .btn__check > i {
   transform: rotate(1turn);
+}
+.btn-menus__style .prix {
+  transition: transform 500ms;
 }
 .btn-menus__style .btn__check {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  right: 0;
+  right: -58px;
   top: 0;
   bottom: 0;
   align-items: center;
@@ -61,13 +67,11 @@ body {
   background-color: #99E2D0;
   border: none;
   color: white;
-  transform: scaleX(0);
-  transform-origin: right;
   transition: transform 500ms;
 }
 .btn-menus__style .btn__check > i {
   transform: rotate(0turn);
-  transition: transform 1000ms;
+  transition: transform 500ms;
 }
 
 header {

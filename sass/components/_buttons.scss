@@ -30,18 +30,25 @@
         margin: 0;
     }
     &:hover {
+        .prix {
+            transform: translateX(-55px);
+        }
         .btn__check {
-            transform: scaleX(1);
+            transform: translateX(-58px);
             > i {
                 transform: rotate(1turn);
             }
         }
     }
 
+    .prix {
+        transition: transform 500ms;
+    }
+
     .btn__check {
         @include flexbox-column;
         position: absolute;
-        right: 0;
+        right: -58px;
         top: 0;
         bottom: 0;
         align-items: center;
@@ -49,12 +56,10 @@
         background-color: $color-tertiary;
         border: none;
         color: white;
-        transform: scaleX(0);
-        transform-origin: right;
         transition: transform 500ms;
         > i {
                 transform: rotate(0turn);
-                transition: transform 1000ms;
+                transition: transform 500ms;
             }
     }
 
