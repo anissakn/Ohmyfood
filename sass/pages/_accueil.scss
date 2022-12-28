@@ -15,11 +15,15 @@
     @include flexbox-column;
     text-align: center;
     background-color: $bgcolor-secondary;
-    height: 300px;
+    height: 280px;
+    padding: 10% 0;
+    box-sizing: border-box;
+    h1 {
+        margin: 0;
+    }
     p {
         @include roboto-lightwght;
         font-size: 1.1em;
-        padding: 0 3%;
     }
 }
 
@@ -43,6 +47,9 @@
             margin-top: 20px;
             z-index: 1;
             &:hover {
+                i {
+                    color: $color-primary;
+                }
                 &::after {
                     opacity: 1;
                 }

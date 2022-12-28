@@ -11,18 +11,63 @@ body {
   box-shadow: 5px 5px 15px -5px lightgrey;
   margin: auto;
 }
+
+.btn-pinkpurple {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55%;
+  height: 50px;
+  margin: auto;
+  text-decoration: none;
+  color: white;
+  border-radius: 30px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  font-size: 0.9em;
+  box-shadow: 5px 5px 15px -5px lightgrey;
+}
+
 .btn-menus__style {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
   width: 90%;
   height: 60px;
   margin-bottom: 15px;
   padding: 0 3%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .btn-menus__style p {
   margin: 0;
+}
+.btn-menus__style:hover .btn__check {
+  transform: scaleX(1);
+}
+.btn-menus__style:hover .btn__check > i {
+  transform: rotate(1turn);
+}
+.btn-menus__style .btn__check {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  align-items: center;
+  width: 17%;
+  background-color: #99E2D0;
+  border: none;
+  color: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 500ms;
+}
+.btn-menus__style .btn__check > i {
+  transform: rotate(0turn);
+  transition: transform 1000ms;
 }
 
 header {
@@ -97,13 +142,17 @@ footer > img {
   justify-content: center;
   text-align: center;
   background-color: #F7F7F7;
-  height: 300px;
+  height: 280px;
+  padding: 10% 0;
+  box-sizing: border-box;
+}
+.restaurant-explorer h1 {
+  margin: 0;
 }
 .restaurant-explorer p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 1.1em;
-  padding: 0 3%;
 }
 
 .fonctionnement {
@@ -131,6 +180,9 @@ footer > img {
   margin-bottom: 20px;
   margin-top: 20px;
   z-index: 1;
+}
+.fonctionnement ul li:hover i {
+  color: #9356DC;
 }
 .fonctionnement ul li:hover::after {
   opacity: 1;
@@ -234,6 +286,7 @@ footer > img {
   justify-content: center;
   position: relative;
   top: -60px;
+  margin-bottom: -60px;
   background-color: #F7F7F7;
   border-radius: 30px 30px 0 0;
 }
@@ -276,4 +329,10 @@ footer > img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.entrees h2 div, .plats h2 div, .desserts h2 div {
+  height: 3px;
+  width: 35px;
+  margin-top: 3px;
+  background-color: #99E2D0;
 }/*# sourceMappingURL=styles.css.map */
