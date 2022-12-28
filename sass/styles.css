@@ -282,6 +282,9 @@ footer > img {
 
 .image__heading {
   width: 100%;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu-entrees-plats-desserts {
