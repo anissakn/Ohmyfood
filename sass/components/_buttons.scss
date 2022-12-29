@@ -10,11 +10,16 @@
     height: 50px;
     margin: auto;
     text-decoration: none;
+    text-align: center;
     color: white;
     border-radius: 30px;
     background-image: linear-gradient($color-secondary, $color-primary);
     font-size: 0.9em;
     box-shadow: 5px 5px 15px -5px lightgrey;
+    &:hover {
+        background-image: linear-gradient(lighten($color-secondary, 5), lighten($color-primary,5));
+        box-shadow: 5px 5px 15px -5px grey;
+    }
 }
 
 .btn-menus__style {
@@ -31,10 +36,10 @@
     }
     &:hover {
         .prix {
-            transform: translateX(-55px);
+            transform: translateX(-250%);
         }
         .btn__check {
-            transform: translateX(-58px);
+            transform: translateX(-100%);
             > i {
                 transform: rotate(1turn);
             }
@@ -48,7 +53,7 @@
     .btn__check {
         @include flexbox-column;
         position: absolute;
-        right: -58px;
+        right: -17%;
         top: 0;
         bottom: 0;
         align-items: center;
@@ -62,7 +67,4 @@
                 transition: transform 500ms;
             }
     }
-
-    
 }
-
