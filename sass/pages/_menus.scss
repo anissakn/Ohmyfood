@@ -12,11 +12,6 @@
     padding-bottom: 30px;
     background-color: $bgcolor-secondary;
     border-radius: 30px 30px 0 0;
-    .section-menus__title {
-        @include flexbox-row;
-        width: 90%;
-        justify-content: space-between;
-    }
     h1 {
         @include shrikhand-titles-font-style;
         @include h1-indentation;
@@ -48,5 +43,26 @@
         width: 35px;
         margin-top: 3px;
         background-color: $color-tertiary;
+    }
+}
+
+.entrees {
+    animation: fadein 1500ms;
+}
+
+.plats {
+    animation: fadein 3000ms;
+}
+
+.desserts {
+    animation: fadein 4500ms;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
     }
 }

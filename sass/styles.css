@@ -47,8 +47,15 @@ body {
 .btn-menus__style p {
   margin: 0;
 }
+.btn-menus__style:hover > p, .btn-menus__style:hover .entrees-plats-desserts__description {
+  display: inline-block;
+  width: 72%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .btn-menus__style:hover .prix {
-  transform: translateX(-250%);
+  transform: translateX(-225%);
 }
 .btn-menus__style:hover .btn__check {
   transform: translateX(-100%);
@@ -57,7 +64,10 @@ body {
   transform: rotate(1turn);
 }
 .btn-menus__style .prix {
+  position: absolute;
+  right: 15px;
   transition: transform 500ms;
+  background-color: #F7F7F7;
 }
 .btn-menus__style .btn__check {
   display: flex;
@@ -77,6 +87,37 @@ body {
 .btn-menus__style .btn__check > i {
   transform: rotate(0turn);
   transition: transform 500ms;
+}
+.btn-menus__style .btn__check:hover {
+  cursor: pointer;
+}
+
+.btn__heart .fa-heart {
+  cursor: pointer;
+  font-size: 1.4em;
+}
+.btn__heart .fa-heart--menus {
+  position: absolute;
+  right: 10%;
+  top: 3%;
+}
+.btn__heart .fa-heart--accueil {
+  position: absolute;
+  right: 10%;
+  bottom: 12%;
+}
+.btn__heart .fa-solid {
+  visibility: hidden;
+  transition: transform 500ms;
+  transform: scaleY(0);
+}
+.btn__heart:hover .fa-solid {
+  visibility: visible;
+  transform: scaleY(1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 
 header {
@@ -278,12 +319,6 @@ footer > img {
   text-align: center;
   font-size: 0.9em;
 }
-.cartes__restaurants > i {
-  position: absolute;
-  font-size: 1.4em;
-  right: 10%;
-  bottom: 13%;
-}
 
 .image__heading {
   width: 100%;
@@ -302,13 +337,6 @@ footer > img {
   padding-bottom: 30px;
   background-color: #F7F7F7;
   border-radius: 30px 30px 0 0;
-}
-.menu-entrees-plats-desserts .section-menus__title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 90%;
-  justify-content: space-between;
 }
 .menu-entrees-plats-desserts h1 {
   font-family: "Shrikhand", cursive;
@@ -348,4 +376,37 @@ footer > img {
   width: 35px;
   margin-top: 3px;
   background-color: #99E2D0;
+}
+
+.entrees {
+  -webkit-animation: fadein 1500ms;
+          animation: fadein 1500ms;
+}
+
+.plats {
+  -webkit-animation: fadein 3000ms;
+          animation: fadein 3000ms;
+}
+
+.desserts {
+  -webkit-animation: fadein 4500ms;
+          animation: fadein 4500ms;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -35,8 +35,15 @@
         margin: 0;
     }
     &:hover {
+        > p, .entrees-plats-desserts__description {
+            display: inline-block;
+            width: 72%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+           }
         .prix {
-            transform: translateX(-250%);
+            transform: translateX(-225%);
         }
         .btn__check {
             transform: translateX(-100%);
@@ -47,7 +54,10 @@
     }
 
     .prix {
+        position: absolute;
+        right: 15px;
         transition: transform 500ms;
+        background-color: $bgcolor-secondary;
     }
 
     .btn__check {
@@ -66,5 +76,42 @@
                 transform: rotate(0turn);
                 transition: transform 500ms;
             }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.btn__heart {
+    .fa-heart {
+        cursor: pointer;
+        font-size: 1.4em;
+        &--menus {
+            position:absolute;
+            right: 10%;
+            top: 3%;
+        }
+        &--accueil {
+            position: absolute;
+            right: 10%;
+            bottom: 12%;
+        }
+    }
+
+    .fa-solid {
+        visibility: hidden;
+        transition: transform 500ms;
+        transform: scaleY(0);
+    }
+
+    &:hover {
+        .fa-solid {
+            visibility: visible;
+            transform: scaleY(1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient($color-secondary, $color-primary);
+        }
     }
 }
