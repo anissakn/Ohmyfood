@@ -66,3 +66,12 @@
         opacity:1;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .menus--disposition {
+        @include flexbox-row;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+}

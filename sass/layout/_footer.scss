@@ -21,3 +21,26 @@ footer {
         left: 10%;
     }
 }
+
+/* Media queries : format desktop */
+@media screen and (min-width: 768px) {
+    footer {
+        height: 80px;
+        > img {
+            width: 30%;
+        }
+    }
+    
+    .footer-links--disposition {
+        @include flexbox-row;
+    }
+
+    .footer-links {
+        margin-right: 25%;
+        text-align: center;
+        width: 20%;
+        > p {
+            left: 150%;
+        }
+    }
+}
