@@ -47,31 +47,25 @@
 }
 
 .entrees {
-    animation: fadein 1500ms;
+    animation: fadein 500ms;
 }
 
 .plats {
-    animation: fadein 3000ms;
+    animation: fadein 900ms;
 }
 
 .desserts {
-    animation: fadein 4500ms;
+    animation: fadein 1300ms;
 }
 
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-
+/* Media queries : version desktop */
 @media screen and (min-width: 768px) {
     .menus--disposition {
         @include flexbox-row;
         justify-content: space-around;
         align-items: baseline;
     }
-
+    .entrees, .plats, .desserts {
+        width: 27%;
+    }
 }

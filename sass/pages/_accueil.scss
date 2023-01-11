@@ -137,7 +137,7 @@
     }
 }
 
-/* Media queries : format tablette */
+/* Media queries : version tablette */
 @media screen and (min-width: 480px) {
     .cartes__restaurants--disposition {
         @include flexbox-row;
@@ -156,9 +156,8 @@
     }
 }
 
-/* Media queries : format desktop */
+/* Media queries : version desktop */
 @media screen and (min-width: 768px) {
-    
     .cartes__restaurants {
         width: 30%;
     }

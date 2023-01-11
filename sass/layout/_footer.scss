@@ -13,34 +13,25 @@ footer {
 .footer-links {
     @include flexbox-row;
     padding: 8px 0;
-    position: relative;
     color: white;
     text-decoration: none;
-    p {
-        position: absolute;
-        left: 10%;
+    i {
+        margin-right: 10px;
     }
 }
 
-/* Media queries : format desktop */
+/* Media queries : version desktop */
 @media screen and (min-width: 768px) {
     footer {
         height: 80px;
         > img {
-            width: 30%;
+            width: 25%;
+            margin: auto;
         }
     }
     
     .footer-links--disposition {
         @include flexbox-row;
-    }
-
-    .footer-links {
-        margin-right: 25%;
-        text-align: center;
-        width: 20%;
-        > p {
-            left: 150%;
-        }
+        justify-content: space-between;
     }
 }

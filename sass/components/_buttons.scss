@@ -117,6 +117,19 @@
     }
 }
 
+/* Media queries : version tablette */
+@media screen and (min-width: 480px) {
+    .btn-menus__style:hover .prix {
+        transform: translateX(-80px);
+    }
+}
+@media screen and (min-width: 550px) {
+    .btn-menus__style:hover .prix {
+        transform: translateX(-110px);
+    }
+}
+
+/* Media queries : version desktop */
 @media screen and (min-width: 768px) {
     .btn-pinkpurple {
         width: 200px;
@@ -128,8 +141,8 @@
             font-size: 0.9em;
         }
         &:hover {
-            > p, .entrees-plats-desserts__description {
-                width: 60%;
+            .prix {
+                transform: translateX(-50px);
             }
         }
     }

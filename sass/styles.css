@@ -1,4 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Shrikhand&display=swap");
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   color: black;
@@ -121,6 +147,18 @@ body {
   background-image: linear-gradient(#FF79DA, #9356DC);
 }
 
+/* Media queries : version tablette */
+@media screen and (min-width: 480px) {
+  .btn-menus__style:hover .prix {
+    transform: translateX(-80px);
+  }
+}
+@media screen and (min-width: 550px) {
+  .btn-menus__style:hover .prix {
+    transform: translateX(-110px);
+  }
+}
+/* Media queries : version desktop */
 @media screen and (min-width: 768px) {
   .btn-pinkpurple {
     width: 200px;
@@ -132,8 +170,8 @@ body {
   .btn-menus__style p {
     font-size: 0.9em;
   }
-  .btn-menus__style:hover > p, .btn-menus__style:hover .entrees-plats-desserts__description {
-    width: 60%;
+  .btn-menus__style:hover .prix {
+    transform: translateX(-50px);
   }
 }
 header {
@@ -178,35 +216,27 @@ footer > img {
   flex-direction: row;
   align-items: center;
   padding: 8px 0;
-  position: relative;
   color: white;
   text-decoration: none;
 }
-.footer-links p {
-  position: absolute;
-  left: 10%;
+.footer-links i {
+  margin-right: 10px;
 }
 
-/* Media queries : format desktop */
+/* Media queries : version desktop */
 @media screen and (min-width: 768px) {
   footer {
     height: 80px;
   }
   footer > img {
-    width: 30%;
+    width: 25%;
+    margin: auto;
   }
   .footer-links--disposition {
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
-  .footer-links {
-    margin-right: 25%;
-    text-align: center;
-    width: 20%;
-  }
-  .footer-links > p {
-    left: 150%;
+    justify-content: space-between;
   }
 }
 .localisation {
@@ -361,7 +391,7 @@ footer > img {
   font-size: 0.9em;
 }
 
-/* Media queries : format tablette */
+/* Media queries : version tablette */
 @media screen and (min-width: 480px) {
   .cartes__restaurants--disposition {
     display: flex;
@@ -380,7 +410,7 @@ footer > img {
     font-size: 0.8em;
   }
 }
-/* Media queries : format desktop */
+/* Media queries : version desktop */
 @media screen and (min-width: 768px) {
   .cartes__restaurants {
     width: 30%;
@@ -445,37 +475,21 @@ footer > img {
 }
 
 .entrees {
-  -webkit-animation: fadein 1500ms;
-          animation: fadein 1500ms;
+  -webkit-animation: fadein 500ms;
+          animation: fadein 500ms;
 }
 
 .plats {
-  -webkit-animation: fadein 3000ms;
-          animation: fadein 3000ms;
+  -webkit-animation: fadein 900ms;
+          animation: fadein 900ms;
 }
 
 .desserts {
-  -webkit-animation: fadein 4500ms;
-          animation: fadein 4500ms;
+  -webkit-animation: fadein 1300ms;
+          animation: fadein 1300ms;
 }
 
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+/* Media queries : version desktop */
 @media screen and (min-width: 768px) {
   .menus--disposition {
     display: flex;
@@ -483,5 +497,8 @@ footer > img {
     align-items: center;
     justify-content: space-around;
     align-items: baseline;
+  }
+  .entrees, .plats, .desserts {
+    width: 27%;
   }
 }/*# sourceMappingURL=styles.css.map */
