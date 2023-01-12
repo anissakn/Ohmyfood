@@ -38,7 +38,8 @@
 
 .entrees, .plats, .desserts {
     @include flexbox-column;
-    h2 div {
+    h2 span {
+        display: block;
         height: 3px;
         width: 35px;
         margin-top: 3px;

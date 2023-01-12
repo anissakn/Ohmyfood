@@ -240,6 +240,9 @@ body {
   .btn-menus__style p {
     font-size: 0.9em;
   }
+  .btn-menus__style:hover > p, .btn-menus__style:hover .entrees-plats-desserts__description {
+    width: 65%;
+  }
   .btn-menus__style:hover .prix {
     transform: translateX(-50px);
   }
@@ -331,7 +334,7 @@ footer > img {
   text-align: center;
   background-color: #F7F7F7;
   height: 280px;
-  padding: 5% 0;
+  padding: 10% 5%;
   box-sizing: border-box;
 }
 .restaurant-explorer h1 {
@@ -482,6 +485,9 @@ footer > img {
 }
 /* Media queries : version desktop */
 @media screen and (min-width: 768px) {
+  .restaurant-explorer {
+    padding: 5%;
+  }
   .cartes__restaurants {
     width: 30%;
   }
@@ -537,7 +543,8 @@ footer > img {
   flex-direction: column;
   justify-content: center;
 }
-.entrees h2 div, .plats h2 div, .desserts h2 div {
+.entrees h2 span, .plats h2 span, .desserts h2 span {
+  display: block;
   height: 3px;
   width: 35px;
   margin-top: 3px;

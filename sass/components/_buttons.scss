@@ -141,6 +141,9 @@
             font-size: 0.9em;
         }
         &:hover {
+            > p, .entrees-plats-desserts__description {
+                width: 65%;
+            }
             .prix {
                 transform: translateX(-50px);
             }
